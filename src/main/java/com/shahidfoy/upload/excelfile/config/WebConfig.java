@@ -27,13 +27,13 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 //        registry.addViewController("/").setViewName("index");
 //    }
 
-//    @Bean
-//    public ViewResolver jspViewResolver() {
-//        InternalResourceViewResolver bean = new InternalResourceViewResolver();
-//        bean.setPrefix("/resources/templates/");
-//        bean.setSuffix(".jsp");
-//        return bean;
-//    }
+    @Bean
+    public ViewResolver jspViewResolver() {
+        InternalResourceViewResolver bean = new InternalResourceViewResolver();
+        bean.setPrefix("/resources/templates/");
+        bean.setSuffix(".jsp");
+        return bean;
+    }
 
     @Bean
     public ExcelPOIHelper excelPOIHelper() {
